@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music</title>
+</head>
+<body bgcolor="slateBlue">
+<font color="salmon" size="6.5">
+<a href='/home/'>home</a>
+<a href='/music/'>music</a>
+<a href='/hobbies/'>hobbies</a>
+<a href='/book/'>book</a>
+<a href='/place/'>place</a> 
+<a href='/friends/'>friends</a>	
+<center> <b>&#x1F3BC;MY music List&#x1F3B5; </b></center>
+<h4> <i>&#x1F3BB;See music play list&#x1F941;</i></h4> 
+<img src="{% static 'img/music.jpeg' %}" height="50">
+<p>
+	<ul type="circle">
+		<li> Angle</li> 
+		<li> maulaa re</li> 
+		<li> yaaron</li> 
+		<li> Tari aakhano aphimi</li>
+		<li> Phelo mohabat</li>
+		<li> First date</li>
+		<li> Fursat</li>
+	</ul>
+<h6>Name: <br> {{name}}</h6>
+<h6> My favourati places :
+<ul>
+	<table border="2">
+{% for p in place %}
+<tr>
+<td><li>{{p}}</li></td></tr>
+{% endfor %}
+</table>
+</ul>
+</h6>
+</p>
+</body>
+</html>

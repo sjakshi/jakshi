@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie</title>
+</head>
+<body bgcolor="sienna">
+	<font color="seashell" size="6.5">
+<table bgcolor="gray">
+<td><button><a href='/home/'>Movies</a></button></td>
+<td><button><a href='/book/'>Books</a></button></td>
+<td><button><a href='/music/'>Music</a></button></td>
+<td><button><a href='/place/'>Places</a></button></td>
+<td><button><a href='/hobbies/'>Hobies</a></button></td>
+<td><button><a href='/friend/'>Friends</a></button></td>
+</table>
+<center> <b>&#x1F4FD;Movie List&#x1F3A5;<b> </center>
+<h2> <i>&#x1F3AC;See movie list&#x1F39E;</h2></i> </h2>
+<p> 
+	<img src="{% static 'img/movie.jpeg' %}" height="50">
+<ol type="i"> 
+	<li> Angle</li> 
+	<li> Thai jase</li> 
+	<li> creature 3D</li>
+	<li> chello Divas</li>
+	<li> love ni bhavai</li>
+	<li> notebook</li>
+</ol>
+<h6>Name: <br> {{name}}</h6>
+<h6> My favourati places :
+<ul>
+	<table border="2">
+{% for p in place %}
+<tr>
+<td><li>{{p}}</li></td></tr>
+{% endfor %}
+</table>
+</ul>
+</h6>
+</p>
+</font>
+</body>
+</html>

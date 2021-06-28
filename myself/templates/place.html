@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Places</title>
+</head>
+<body bgcolor="aquamarine">
+	<font color="brown" size="5">
+<a href='/home/'>home</a>
+<a href='/music/'>music</a>
+<a href='/hobbies/'>hobbies</a>
+<a href='/book/'>book</a>
+<a href='/movie/'>movie</a> 
+<a href='/friends/'>friends</a>	
+<center>&#x1F3D6;Places list&#x1F681;</center>
+<h1><i> &#x1F6EC;Let's see which i kike in place &#x1F5FB;&#x26F1;</i></h1>
+<h2>
+	<img src="{% static 'img/place.jpg' %}" height="50">
+<ul type="square">
+	<li> jaipur</li> 
+	<li> udaypur</li> 
+	<li> goa</li>
+	<li> manali</li> 
+	<li> bali</li>
+	<li> imagica</li>
+</ul>
+</h2>
+<h6>Name: <br> {{name}}</h6>
+<h6> My favourati places :
+<ul>
+	<table border="2">
+{% for p in place %}
+<tr>
+<td><li>{{p}}</li></td></tr>
+{% endfor %}
+</table>
+</ul>
+</h6>
+</font>
+</body>
+</html>

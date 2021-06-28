@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hobbies</title>
+</head>
+<body bgcolor="springgreen">
+	<font color="hotpink" size="6.5">
+<a href='/home/'>home</a>
+<a href='/music/'>music</a>
+<a href='/book/'>books</a>
+<a href='/movie/'>movie</a>
+<a href='/place/'>place</a> 
+<a href='/friends/'>friends</a>
+<center><b>&#x1F4D6;My hobbies&#x1F4DD;</center></b></center>
+<h3><i>&#x1F3A7;List of my hobbies&#x1F58C;</i></h3>
+<p>
+	<img src="{% static 'img/hobbies.png'%}" height="80">
+<ol type="I">
+	<li> playing guitar</li> 
+	<li> playing vallyball</li> 
+	<li> reading book</li>
+	<li> travelling</li>
+	<li> listening music</li>
+</ol>
+<h6>Name: <br> {{name}}</h6>
+<h6> My favourati places :
+<ul>
+	<table border="2">
+{% for p in place %}
+<tr>
+<td><li>{{p}}</li></td></tr>
+{% endfor %}
+</table>
+</ul>
+</h6>
+</p>
+</font>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friends</title>
+</head>
+<body bgcolor="orchid">
+	<font color="midnightblue" size="6.5">
+<a href='/home/'>home</a>
+<a href='/music/'>music</a>
+<a href='/hobbies/'>hobbies</a>
+<a href='/movie/'>movie</a>
+<a href='/place/'>place</a> 
+<a href='/book/'>book</a>
+<center><b>&#x1F91D;My friends name&#x1F91D;</b></center>
+<img src="{% static 'img/friends.jpeg'%}" height="70">
+<h3> <i>&#x1F46D;List of my bffs&#x1F46C;</i></h3>
+<p>
+<ul> 
+	<li> vidhi</li> 
+	<li> nandini</li> 
+	<li> sakshi</li>
+	<li> snehal</li>
+	<li> pooja</li>
+</ul>
+<h6>Name: <br> {{name}}</h6>
+<h6> My favourati places :
+<ol>
+	<table border="2">
+{% for p in place %}
+<tr>
+<td><li>{{p}}</li></td></tr>
+{% endfor %}
+</table>
+</ol>
+</h6>
+</p>
+</font>
+</body>
+</html>

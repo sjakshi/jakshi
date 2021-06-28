@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body bgcolor="lightgrey">
+<font color="red" size="6.5">
+<table bgcolor="gray">
+<td><button><a href='/book/'>Books</a></button></td>
+<td><button><a href='/music/'>Music</a></button></td>
+<td><button><a href='/movie/'>Movies</a></button></td>
+<td><button><a href='/place/'>Places</a></button></td>
+<td><button><a href='/hobbies/'>Hobies</a></button></td>
+<td><button><a href='/friend/'>Friends</a></button></td>
+<td><button><a href='/marksheet/'>marksheet</a></button></td>
+</table>
+
+<center><b><marquee>&#x1F3E0;welcome to my website&#x1F3D8;</marquee></b></center> 
+	<img src="{% static 'img/w1.jpeg' %}" height="70">
+<p>myself jakshi shah <br> I am student of IMsc(IT)</p>
+<h6>wlcome {{name}}</h6>
+<h6> My favourati places</h6>
+{% for p in place %} 
+{{p}} <br>
+{% endfor %}
+</font>
+<footer><p>Contact us: 9427068054</p></footer>
+</body>
+</html>
